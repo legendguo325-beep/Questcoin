@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Arcade Quest Cabinet",
+  "name": "Arcade Quest Cabinet Pro",
   "version": "1.0",
-  "description": "Background tracker extension with full-screen controllable 2D arcade battleground arena.",
+  "description": "Background tracker extension with save accounts and full-screen anime battle arena.",
   "permissions": [
     "storage",
     "tabs"
@@ -11,4 +11,5 @@
     "default_popup": "popup.html"
   }
 }
+
 

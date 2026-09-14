@@ -1,0 +1,28 @@
+/* ========================================================================== */
+/* MODULE B: COOLDOWN ACTION HOTBAR AND VITALS DISPLAY INTERFACES            */
+/* ========================================================================== */
+.ability-hotkey-belt { background: #11121c; padding: 12px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; border-top: 1px solid #24283b; }
+.ability-slot { background: #0f111a; border: 2px solid #282a3e; border-radius: 4px; padding: 8px; position: relative; text-align: center; cursor: pointer; transition: all 0.1s; }
+.ability-slot:hover:not(.locked) { border-color: var(--neon-cyan); background: rgba(0, 237, 215, 0.05); }
+.ability-slot.locked { opacity: 0.25; cursor: not-allowed; }
+
+.key-badge { position: absolute; top: -5px; left: 4px; font-family: 'Press Start 2P', monospace; font-size: 8px; background: #ff007f; color: white; padding: 1px 4px; border-radius: 2px; }
+.skill-label { font-size: 13px; font-weight: bold; color: #fff; margin-top: 2px; }
+.skill-perk { font-size: 10px; color: #565f89; display: block; margin-top: 3px; font-family: monospace; }
+
+.arena-vitals-footer { background: #11121c; padding: 15px; border-top: 2px solid #1c1d2a; display: flex; flex-direction: column; gap: 8px; }
+.vital-bar-box { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.vital-label { font-family: 'Press Start 2P', monospace; font-size: 8px; width: 75px; color: #a9b1d6; }
+.vital-digits { font-family: 'Press Start 2P', monospace; font-size: 8px; width: 85px; text-align: right; color: #a9b1d6; }
+.vital-tray { flex: 1; height: 10px; background: #000; border-radius: 3px; border: 1px solid #282a3e; overflow: hidden; }
+
+.player-health div { height: 100%; background: linear-gradient(90deg, var(--neon-cyan) 0%, #8ce1ff 100%); transition: width 0.1s ease; }
+.boss-health div { height: 100%; background: linear-gradient(90deg, var(--neon-pink) 0%, #ff55a3 100%); transition: width 0.1s ease; }
+
+.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.shop-card { background: var(--card-bg); padding: 15px; border-radius: 6px; border: 1px solid #282a3e; display: flex; flex-direction: column; }
+.slot-tag { font-size: 10px; color: #7aa2f7; text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
+.perk-info { font-size: 13px; color: #a9b1d6; flex: 1; margin-bottom: 10px; }
+.buy-btn { background: var(--neon-cyan); color: #000; border: none; padding: 8px; font-family: 'Press Start 2P', monospace; font-size: 9px; cursor: pointer; border-radius: 4px; }
+.buy-btn:disabled { background: #282a3e !important; color: var(--neon-green) !important; border: 1px solid var(--neon-green); }
+.avatar-name { font-size: 11px; font-family: 'Press Start 2P', monospace; color: var(--neon-cyan); margin-top: 5px; }

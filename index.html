@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arcade Cabinet — High-Res Edition</title>
+  <title>QuestCoin — Anime Arcade Edition</title>
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin="anonymous">
   <link href="https://googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -11,45 +11,55 @@
 </head>
 <body>
 
-  <!-- LAYER A: HERO REGISTRY OVERLAY -->
+  <!-- LAYER A: RETRO ACCOUNT REGISTRY & CREATION GATING OVERLAY -->
   <div id="login-overlay-screen" class="gate-overlay">
     <div class="arcade-login-box">
-      <h2>🆕 HERO CREATION REGISTRY</h2>
-      <p style="color: #a9b1d6; font-size: 13px; margin-bottom: 20px;">Initialize your profile nodes to sync your character canvas to the mainframe matrix.</p>
+      <h2 id="gate-main-title">🔐 MAINFRAME ACCESS ACCOUNT</h2>
+      <p id="gate-sub-title" style="color: #a9b1d6; font-size: 13px; margin-bottom: 15px;">Sign in or create a local system profile node to secure your coins ledger.</p>
       
-      <!-- ULTRA HIGH PORTRAIT LIVE PREVIEW -->
-      <div class="signup-portrait-stage">
-        <div class="pixel-avatar-canvas" id="signup-preview-avatar">
-          <div id="pixel-base-gender" class="pixel-layer base-female-hd"></div>
-          <div id="pixel-hair-node" class="pixel-layer hair-lavender-hd"></div>
-          <div id="pixel-armor-node" class="pixel-layer gear-none"></div>
-          <div id="pixel-weapon-node" class="pixel-layer gear-none"></div>
+      <!-- GOOGLE SIGN IN SIMULATION BUTTON -->
+      <button id="google-auth-btn" class="menu-action-btn" style="background: #ffffff; color: #000000; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
+        <svg style="width:16px; height:16px;" viewBox="0 0 24 24"><path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.555 0-6.435-2.88-6.435-6.435s2.88-6.435 6.435-6.435c1.594 0 3.036.574 4.161 1.524l3.125-3.125C19.261 1.637 15.957 1 12.24 1c-6.075 0-11 4.925-11 11s4.925 11 11 11c6.332 0 11.24-4.453 11.24-11.24 0-.472-.043-.933-.125-1.375H12.24z"/></svg>
+        SIGN IN WITH GOOGLE
+      </button>
+
+      <div style="text-align: center; font-size: 11px; color: #565f89; margin-bottom: 15px; font-family: 'Press Start 2P', monospace;">- OR LOCAL PROFILE -</div>
+
+      <!-- CHARACTER PROFILE CREATION (REVEALED UPON LOCAL INTERACTION OR AUTH) -->
+      <div id="character-creation-fields">
+        <div class="signup-portrait-stage">
+          <div class="pixel-avatar-canvas" id="signup-preview-avatar">
+            <div id="pixel-base-gender" class="pixel-layer base-female-hd"></div>
+            <div id="pixel-hair-node" class="pixel-layer hair-lavender-hd"></div>
+            <div id="pixel-armor-node" class="pixel-layer gear-none"></div>
+            <div id="pixel-weapon-node" class="pixel-layer gear-none"></div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>HERO CODENAME</label>
+          <input type="text" id="reg-name" placeholder="Enter username..." maxlength="14">
+        </div>
+
+        <div class="input-group">
+          <label>HERO ARCHETYPE</label>
+          <select id="reg-gender">
+            <option value="female">Female Hero (Glistening Iris & Winking Eye)</option>
+            <option value="male">Male Hero (Dark Steel Mesh Uniform)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>HAIR STYLE VARIANT</label>
+          <select id="reg-hair">
+            <option value="hair-lavender-hd">High-Density Muted Lavender Bob</option>
+            <option value="hair-cyan-hd">High-Density Spiky Neon Cyan</option>
+            <option value="hair-gold-hd">High-Density Undercut Crown Gold</option>
+          </select>
         </div>
       </div>
 
-      <div class="input-group">
-        <label>HERO CODENAME</label>
-        <input type="text" id="reg-name" placeholder="Enter username..." maxlength="14">
-      </div>
-
-      <div class="input-group">
-        <label>HERO ARCHETYPE</label>
-        <select id="reg-gender">
-          <option value="female">Female Hero (Glistening Iris & Winking Eye)</option>
-          <option value="male">Male Hero (Dark Steel Mesh Uniform)</option>
-        </select>
-      </div>
-
-      <div class="input-group">
-        <label>HAIR STYLE VARIANT</label>
-        <select id="reg-hair">
-          <option value="hair-lavender-hd">High-Density Muted Lavender Bob</option>
-          <option value="hair-cyan-hd">High-Density Spiky Neon Cyan</option>
-          <option value="hair-gold-hd">High-Density Undercut Crown Gold</option>
-        </select>
-      </div>
-
-      <button id="login-submit-btn" class="menu-action-btn">SYNC & PRESS START</button>
+      <button id="login-submit-btn" class="menu-action-btn" style="margin-top: 10px;">SYNC ACCOUNT & START</button>
     </div>
   </div>
 
@@ -59,73 +69,42 @@
       <div class="logo"><span class="neon-text">QUEST</span><span class="green-text">CABINET</span></div>
       <div class="user-status-card">RUNNER: <span id="hud-name" style="color: #00edd7;">PLAYER</span></div>
       <div class="hud-wallet">🪙 COINS: <span id="coin-total">200</span></div>
+      <button id="logout-btn" style="background: transparent; color: #ff007f; border: 1px solid #ff007f; padding: 4px 10px; font-family: 'Space Grotesk', sans-serif; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 12px;">LOGOUT</button>
     </header>
 
     <main class="arcade-stage">
-      
-      <!-- LEFT WINDOW: 2D SIDE-VIEW BATTLEGROUND SHOWDOWN -->
+      <!-- LEFT WINDOW: 2D CONTROLLABLE ACTION ARENA SCREEN -->
       <section class="panel quest-panel">
         <h2 class="panel-title text-green">> SIDEVIEW_STAGE_ARENA</h2>
         
         <div class="card arena-container-box">
-          
           <div id="combat-viewport-arena" class="sideview-stage-viewport">
-            
-            <!-- LEFT AREA: HIGH-DENSITY SIDE-VIEW STANDING HERO -->
             <div id="stage-hero-anchor" class="stage-character-wrapper hero-anchor-pos">
               <div id="combat-action-flash-fx" class="damage-flash-overlay"></div>
             </div>
-
-            <!-- RIGHT AREA: DETAILED MINOTAUR OVERLORD BOSS -->
             <div id="stage-boss-anchor" class="stage-character-wrapper boss-anchor-pos">
               <div class="pixel-minotaur-boss"></div>
               <div id="boss-cleave-swipe-fx" class="minotaur-slash-arc"></div>
             </div>
-
           </div>
 
-          <!-- HOTKEY ACTION SKILLS MODULE -->
+          <!-- HOTKEY ACTION SKILLS BUTTON BELT -->
           <div class="ability-hotkey-belt">
-            <div class="ability-slot locked" id="skill-1">
-              <span class="key-badge">1</span>
-              <div class="skill-label">Plasma Slash</div>
-              <span class="skill-perk">Requires Blade</span>
-            </div>
-            <div class="ability-slot locked" id="skill-2">
-              <span class="key-badge">2</span>
-              <div class="skill-label">Laser Burst</div>
-              <span class="skill-perk">Requires Blade</span>
-            </div>
-            <div class="ability-slot locked" id="skill-3">
-              <span class="key-badge">3</span>
-              <div class="skill-label">Core Shield</div>
-              <span class="skill-perk">Requires Armor</span>
-            </div>
-            <div class="ability-slot locked" id="skill-4">
-              <span class="key-badge">4</span>
-              <div class="skill-label">Overdrive Burst</div>
-              <span class="skill-perk">Requires Full Set</span>
-            </div>
+            <div class="ability-slot locked" id="skill-1"><span class="key-badge">1</span><div class="skill-label">Plasma Slash</div><span class="skill-perk">Requires Blade</span></div>
+            <div class="ability-slot locked" id="skill-2"><span class="key-badge">2</span><div class="skill-label">Laser Burst</div><span class="skill-perk">Requires Blade</span></div>
+            <div class="ability-slot locked" id="skill-3"><span class="key-badge">3</span><div class="skill-label">Core Shield</div><span class="skill-perk">Requires Armor</span></div>
+            <div class="ability-slot locked" id="skill-4"><span class="key-badge">4</span><div class="skill-label">Overdrive Burst</div><span class="skill-perk">Requires Full Set</span></div>
           </div>
 
           <!-- BOTTOM LIFE METERS -->
           <div class="arena-vitals-footer">
-            <div class="vital-bar-box">
-              <span class="vital-label">HERO HP</span>
-              <div class="vital-tray player-health"><div id="ui-player-hp-fill" style="width: 100%;"></div></div>
-              <span class="vital-digits" id="ui-player-hp-text">100/100</span>
-            </div>
-            <div class="vital-bar-box">
-              <span class="vital-label">BOSS HP</span>
-              <div class="vital-tray boss-health"><div id="ui-boss-hp-fill" style="width: 100%;"></div></div>
-              <span class="vital-digits" id="ui-boss-hp-text">300/300</span>
-            </div>
+            <div class="vital-bar-box"><span class="vital-label">HERO HP</span><div class="vital-tray player-health"><div id="ui-player-hp-fill" style="width: 100%;"></div></div><span class="vital-digits" id="ui-player-hp-text">100/100</span></div>
+            <div class="vital-bar-box"><span class="vital-label">BOSS HP</span><div class="vital-tray boss-health"><div id="ui-boss-hp-fill" style="width: 100%;"></div></div><span class="vital-digits" id="ui-boss-hp-text">300/300</span></div>
           </div>
-
         </div>
       </section>
 
-      <!-- RIGHT WINDOW: UPGRADE WORKSHOP VENDORS -->
+      <!-- RIGHT WINDOW: WORKSHOP STORE DECK -->
       <section class="panel shop-panel">
         <h2 class="panel-title text-cyan">> INVENTORY_ARMORY_STORE</h2>
         
@@ -139,14 +118,14 @@
             <h4>Paladin Core Armor</h4>
             <span class="slot-tag">Body Armor Slot</span>
             <p class="perk-info">Equips glowing gold structural plates and links ability slot 3 **Core Shield**.</p>
-            <div class="shop-cost" style="font-family:'Press Start 2P'; font-size:9px; color:var(--neon-cyan); margin-bottom:8px;">💰 30 COINS</div>
+            <div style="font-family:'Press Start 2P'; font-size:9px; color:var(--neon-cyan); margin-bottom:8px;">💰 30 COINS</div>
             <button class="buy-btn" id="btn-cyber">Equip Armor</button>
           </div>
           <div class="shop-card">
             <h4>Plasma Laser Blade</h4>
             <span class="slot-tag">Weapon Tool Slot</span>
             <p class="perk-info">Equips an 8-bit energy plasma laser beam saber lines and links attack slots 1 and 2.</p>
-            <div class="shop-cost" style="font-family:'Press Start 2P'; font-size:9px; color:var(--neon-cyan); margin-bottom:8px;">💰 50 COINS</div>
+            <div style="font-family:'Press Start 2P'; font-size:9px; color:var(--neon-cyan); margin-bottom:8px;">💰 50 COINS</div>
             <button class="buy-btn" id="btn-weapon">Equip Weapon</button>
           </div>
         </div>
@@ -154,6 +133,7 @@
     </main>
   </div>
 
+  <!-- 🟢 Single, secure consolidated script file script link to fix the black screen loading crash -->
   <script src="script.js"></script>
 </body>
 </html>
