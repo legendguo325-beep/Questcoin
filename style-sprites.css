@@ -1,0 +1,45 @@
+/* PIXEL COORDINATES ART LIBRARY */
+.base-female-hd {
+  background: transparent;
+  box-shadow:
+    10px 14px var(--skin-hd-main), 11px 14px var(--skin-hd-main), 12px 14px var(--skin-hd-main), 13px 14px var(--skin-hd-main), 14px 14px var(--skin-hd-shade),
+    9px 15px var(--skin-hd-main), 10px 15px var(--skin-hd-main), 11px 15px var(--skin-hd-main), 12px 15px var(--skin-hd-main), 13px 15px var(--skin-hd-main), 14px 15px var(--skin-hd-shade),
+    9px 16px var(--skin-hd-shade), 10px 16px var(--skin-hd-main), 11px 16px var(--skin-hd-main), 12px 16px var(--skin-hd-main), 13px 16px var(--skin-hd-shade),
+    11px 17px var(--skin-hd-shade), 12px 17px var(--skin-hd-shade),
+    9px 16px var(--anime-blush-hd), 14px 16px var(--anime-blush-hd),
+    10px 15px var(--eye-hd-dark), 11px 15px var(--eye-hd-blue), 13px 15px var(--eye-hd-dark), 14px 15px var(--eye-hd-dark),
+    10px 16px var(--eye-hd-blue), 11px 16px #ffffff,
+    9px 18px #ffffff, 10px 18px #12131a, 11px 18px #12131a, 12px 18px #12131a, 13px 18px #12131a, 14px 18px #ffffff,
+    8px 19px #ffffff, 9px 19px #ffffff, 10px 19px #12131a, 11px 19px #12131a, 12px 19px #12131a, 13px 19px #12131a, 14px 19px #ffffff, 15px 19px #ffffff,
+    9px 20px #ffffff, 14px 20px #ffffff, 9px 21px #ffffff, 14px 21px #ffffff;
+}
+.base-male-hd {
+  background: transparent;
+  box-shadow:
+    10px 14px var(--skin-hd-main), 11px 14px var(--skin-hd-main), 12px 14px var(--skin-hd-main), 13px 14px var(--skin-hd-shade),
+    9px 15px var(--skin-hd-main), 10px 15px var(--eye-hd-dark), 11px 15px var(--skin-hd-main), 12px 15px var(--eye-hd-dark), 13px 15px var(--skin-hd-shade),
+    10px 16px var(--skin-hd-shade), 11px 16px var(--skin-hd-main), 12px 16px var(--skin-hd-main),
+    9px 18px #222430, 10px 18px #3b4261, 11px 18px #222430, 12px 18px #222430, 13px 18px #3b4261, 14px 18px #222430,
+    8px 19px #222430, 9px 19px #3b4261, 10px 19px #3b4261, 11px 19px #222430, 12px 19px #222430, 13px 19px #3b4261, 14px 19px #222430,
+    9px 20px #111116, 13px 20px #111116, 9px 21px #050508, 13px 21px #050508;
+}
+.hair-lavender-hd {
+  background: transparent;
+  box-shadow:
+    9px 11px var(--hair-lavender-main), 10px 11px var(--hair-lavender-light), 11px 11px var(--hair-lavender-light), 12px 11px var(--hair-lavender-main), 13px 11px var(--hair-lavender-main),
+    8px 12px var(--hair-lavender-dark), 9px 12px var(--hair-lavender-main), 10px 12px var(--hair-lavender-light), 11px 12px var(--hair-lavender-light), 12px 12px var(--hair-lavender-main), 13px 12px var(--hair-lavender-main), 14px 12px var(--hair-lavender-dark),
+    7px 13px var(--hair-lavender-dark), 8px 13px var(--hair-lavender-main), 9px 13px var(--hair-lavender-main), 14px 13px var(--hair-lavender-main), 15px 13px var(--hair-lavender-dark),
+    7px 14px var(--hair-lavender-dark), 8px 14px var(--hair-lavender-main), 15px 14px var(--hair-lavender-main), 16px 14px var(--hair-lavender-dark),
+    6px 15px var(--hair-lavender-dark), 7px 15px var(--hair-lavender-main), 16px 15px var(--hair-lavender-main), 17px 15px var(--hair-lavender-dark),
+    6px 16px var(--hair-lavender-dark), 17px 16px var(--hair-lavender-dark);
+}
+.hair-cyan-hd { background: transparent; box-shadow: 9px 11px #00edd7, 11px 11px #00edd7, 8px 12px #00edd7, 10px 12px #fff, 12px 12px #00edd7, 7px 13px #1b73ba, 8px 13px #00edd7, 15px 13px #00edd7, 7px 15px #1b73ba, 16px 15px #1b73ba; }
+.hair-gold-hd { background: transparent; box-shadow: 9px 12px #ffd700, 10px 12px #ffd700, 11px 12px #ffd700, 12px 12px #ffd700, 8px 13px #b8860b, 9px 13px #ffd700, 13px 13px #ffd700, 14px 13px #b8860b; }
+.gear-none { background: transparent; }
+.armor-gold-guards { background: transparent; box-shadow: 7px 18px #ffd700, 8px 18px #ffd700, 14px 18px #ffd700, 15px 18px #ffd700, 7px 19px #b8860b, 8px 19px #ffd700, 14px 19px #ffd700, 15px 19px #b8860b; }
+.weapon-plasma-sword { background: transparent; box-shadow: 14px 17px #555555, 15px 17px #00edd7, 16px 17px #00edd7, 17px 17px #ffffff, 18px 17px #00edd7, 19px 17px #00edd7, 20px 17px #00edd7, 21px 17px #00edd7, 22px 17px #00edd7; }
+.pixel-minotaur-boss { background: transparent; box-shadow: 2px 2px #fff, 3px 3px #fff, 4px 4px #ccc, 20px 2px #fff, 19px 3px #fff, 18px 4px #ccc, 8px 6px #5c4033, 9px 6px #5c4033, 13px 6px #5c4033, 14px 6px #5c4033, 7px 7px #ff0055, 8px 7px #ff0055, 14px 7px #ff0055, 15px 7px #ff0055, 6px 8px #8b5a2b, 7px 8px #8b5a2b, 8px 8px #8b5a2b, 14px 8px #8b5a2b, 15px 8px #8b5a2b, 4px 10px #3d2b22, 5px 10px #5c4033, 16px 10px #5c4033, 17px 10px #3d2b22, 3px 11px #3d2b22, 4px 11px #5c4033, 17px 11px #5c4033, 18px 11px #3d2b22, 4px 12px #3d2b22, 5px 12px #3d2b22, 16px 12px #3d2b22, 17px 12px #3d2b22, 1px 6px #aaa, 2px 6px #fff, 1px 7px #aaa, 2px 7px #fff, 2px 8px #555, 2px 9px #555; }
+.minotaur-slash-arc { position: absolute; top: -10px; left: -40px; width: 45px; height: 45px; border-left: 4px solid var(--neon-pink); border-radius: 50%; opacity: 0; pointer-events: none; }
+.minotaur-slash-arc.sweep-run { animation: arcStrike 0.25s ease-out forwards; }
+@keyframes arcStrike { 0% { opacity: 1; transform: scale(0.6) rotate(0deg); } 100% { opacity: 0; transform: scale(1.3) rotate(-90deg); } }
+@keyframes beastBreath { from { transform: translateY(0px); } to { transform: translateY(-1px); } }
