@@ -31,11 +31,7 @@
   <p>Real-time background browser activity trackers are standing by.</p>
   <button class="launch-btn" id="open-cabinet-btn">PRESS START</button>
 
-  <script>
-    document.getElementById('open-cabinet-btn').addEventListener('click', () => {
-      // Redirects user straight out of the tiny pop-up into your custom full-screen page
-      chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
-    });
-  </script>
+  <!-- 🟢 Connected safely via a secure external file link -->
+  <script src="popup.js"></script>
 </body>
 </html>
