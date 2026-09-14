@@ -1,2 +1,2 @@
-# questcoin
+# QUESTCOIN
 This is Questcoin

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 220px;
+      background: #0f111a;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      margin: 0;
+      text-align: center;
+    }
+    h3 { color: #39ff14; font-size: 14px; margin-top: 0; letter-spacing: 1px; }
+    p { font-size: 11px; color: #a9b1d6; margin-bottom: 15px; }
+    .launch-btn {
+      background: #00edd7;
+      color: #000;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .launch-btn:hover { background: #39ff14; }
+  </style>
+</head>
+<body>
+  <h3>QUESTCOIN MAINFRAME</h3>
+  <p>Real-time background browser activity trackers are standing by.</p>
+  <button class="launch-btn" id="open-cabinet-btn">PRESS START</button>
+
+  <script>
+    document.getElementById('open-cabinet-btn').addEventListener('click', () => {
+      // Redirects user straight out of the tiny pop-up into your custom full-screen page
+      chrome.tabs.create({ url: chrome.runtime.getURL("index.html") });
+    });
+  </script>
+</body>
+</html>

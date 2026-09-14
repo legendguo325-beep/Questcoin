@@ -1,0 +1,85 @@
+@import url('https://googleapis.com');
+
+:root {
+  --bg-dark: #0a0b10;
+  --panel-bg: #14151f;
+  --card-bg: #1c1d2a;
+  --neon-green: #39ff14;
+  --neon-cyan: #00edd7;
+  --neon-pink: #ff007f;
+}
+
+body {
+  margin: 0; background-color: var(--bg-dark); color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  height: 100vh; display: flex; justify-content: center; align-items: center;
+  overflow: hidden;
+}
+
+/* USER RECREATION PROFILE REGISTRY PAGE COVERS */
+.gate-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(10, 11, 16, 0.95);
+  display: flex; justify-content: center; align-items: center; z-index: 9999;
+}
+
+.arcade-login-box {
+  background: var(--panel-bg); border: 3px solid var(--neon-cyan);
+  padding: 30px; border-radius: 8px; width: 100%; max-width: 450px;
+  box-shadow: 0 0 20px rgba(0, 237, 215, 0.2);
+}
+
+.arcade-login-box h2 {
+  font-family: 'Press Start 2P', monospace; font-size: 13px; color: var(--neon-cyan); margin-bottom: 10px;
+}
+
+.input-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px; }
+.input-group label { font-size: 11px; font-weight: bold; color: #7aa2f7; }
+.input-group input, .input-group select {
+  background: #0f111a; border: 1px solid #3b4261; padding: 10px; border-radius: 4px; color: #fff; outline: none;
+}
+
+.menu-action-btn {
+  background: var(--neon-green); color: #000; border: none; padding: 12px; width: 100%;
+  font-family: 'Press Start 2P', monospace; font-size: 11px; font-weight: bold; cursor: pointer; border-radius: 4px;
+}
+
+/* WORKSPACE SPLIT CONTAINER LAYOUT SYSTEMS */
+.arcade-header {
+  background: rgba(10,11,16,0.9); border-bottom: 2px solid #1c1d2a;
+  padding: 15px 25px; display: flex; justify-content: space-between; align-items: center;
+}
+.logo { font-family: 'Press Start 2P', monospace; font-size: 16px; }
+.neon-text { color: #fff; } .green-text { color: var(--neon-green); }
+.hud-wallet { font-family: 'Press Start 2P', monospace; color: var(--neon-green); font-size: 14px; }
+
+.arcade-stage { display: flex; height: calc(100vh - 65px); }
+.panel { flex: 1; padding: 25px; overflow-y: auto; }
+.quest-panel { background-color: var(--panel-bg); border-right: 2px solid #1c1d2a; }
+.shop-panel { background-color: #181926; }
+.panel-title { font-family: 'Press Start 2P', monospace; font-size: 12px; margin-bottom: 20px; }
+
+/* CANVAS PREVIEW SYSTEM FRAMEWORX */
+.avatar-lab {
+  background: #0d0e15; border: 2px dashed var(--neon-cyan); padding: 20px;
+  border-radius: 8px; display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;
+}
+.avatar-frame {
+  width: 110px; height: 110px; background: var(--panel-bg); border-radius: 50%;
+  border: 2px solid #282a3e; display: flex; flex-direction: column; justify-content: center; align-items: center;
+  position: relative; animation: avatarFloat 1.8s ease-in-out infinite alternate;
+}
+.hair-layer { position: absolute; top: 15px; font-size: 24px; z-index: 5; }
+.avatar-sprite { font-size: 38px; margin-top: 10px; }
+.avatar-name { font-size: 10px; font-family: 'Press Start 2P', monospace; color: var(--neon-cyan); margin-top: 5px; }
+
+/* VENDOR ARRAYS */
+.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.shop-card { background: var(--card-bg); padding: 15px; border-radius: 6px; border: 1px solid #282a3e; display: flex; flex-direction: column; }
+.slot-tag { font-size: 10px; color: #7aa2f7; text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
+.perk-info { font-size: 13px; color: #a9b1d6; flex: 1; margin-bottom: 10px; }
+.buy-btn { background: var(--neon-cyan); color: #000; border: none; padding: 8px; font-family: 'Press Start 2P', monospace; font-size: 9px; cursor: pointer; border-radius: 4px; }
+.buy-btn:disabled { background: #282a3e !important; color: var(--neon-green) !important; border: 1px solid var(--neon-green); }
+
+@keyframes bossFloat { from { transform: translateY(0px); } to { transform: translateY(-8px); } }
+@keyframes avatarFloat { from { transform: translateY(0px); } to { transform: translateY(-5px); } }
