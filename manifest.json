@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "QuestCoin Cabinet Pro",
+  "name": "Arcade QuestCoin",
   "version": "1.0",
   "description": "Background tracker extension with full-screen arcade dashboard integration.",
   "permissions": [
