@@ -8,12 +8,18 @@
   --neon-cyan: #00edd7;
   --neon-pink: #ff007f;
   
-  /* 🎨 Premium Anime Profile Swatch Palette Matrices */
-  --skin-main: #fcd0a1;
-  --skin-shadow: #e0a370;
-  --eye-color: #1a1a2e;
-  --outfit-dark: #12131a;
-  --outfit-accent: #00f0ff;
+  /* Advanced Shaded Portrait Swatch Maps */
+  --skin-bright: #fff3e3;
+  --skin-shade: #ffdcb5;
+  --anime-blush: #ffa6b9;
+  --eye-dark: #1f142e;
+  --eye-spark: #ffffff;
+  --eye-iris: #ff5e97;
+  --hair-base: #3baee3;
+  --hair-dark: #1b73ba;
+  --hair-light: #8ce1ff;
+  --sailor-white: #ffffff;
+  --sailor-red: #cc2433;
 }
 
 body {
@@ -23,120 +29,126 @@ body {
   overflow: hidden;
 }
 
-/* MODAL REGISTRY WRAPPERS */
+/* SIGNUP MODAL PAGE COMPONENT DESIGN */
 .gate-overlay {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
   background: rgba(10, 11, 16, 0.96);
   display: flex; justify-content: center; align-items: center; z-index: 9999;
 }
-.arcade-login-box { background: var(--panel-bg); border: 3px solid var(--neon-cyan); padding: 30px; border-radius: 8px; width: 100%; max-width: 450px; }
-.arcade-login-box h2 { font-family: 'Press Start 2P', monospace; font-size: 13px; color: var(--neon-cyan); margin-bottom: 15px; }
-.input-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px; }
+.arcade-login-box {
+  background: var(--panel-bg); border: 3px solid var(--neon-cyan);
+  padding: 25px; border-radius: 8px; width: 100%; max-width: 460px;
+  box-shadow: 0 0 25px rgba(0, 237, 215, 0.25);
+}
+.arcade-login-box h2 { font-family: 'Press Start 2P', monospace; font-size: 13px; color: var(--neon-cyan); margin-bottom: 10px; text-align: center; }
+.input-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
 .input-group label { font-size: 11px; font-weight: bold; color: #7aa2f7; }
-.input-group input, .input-group select { background: #0f111a; border: 1px solid #3b4261; padding: 10px; border-radius: 4px; color: #fff; outline: none; }
-.menu-action-btn { background: var(--neon-green); color: #000; border: none; padding: 12px; width: 100%; font-family: 'Press Start 2P', monospace; font-size: 11px; font-weight: bold; cursor: pointer; }
+.input-group input, .input-group select { background: #0f111a; border: 1px solid #3b4261; padding: 10px; border-radius: 4px; color: #fff; outline: none; font-size: 14px; }
+.menu-action-btn { background: var(--neon-green); color: #000; border: none; padding: 12px; width: 100%; font-family: 'Press Start 2P', monospace; font-size: 11px; font-weight: bold; cursor: pointer; border-radius: 4px; margin-top: 5px; }
 
-/* ARCADE SCREEN CABINET SPLIT BLOCKS */
+/* RE-ARRANGED CONFIG FOR LIVE SIGNUP PROFILE PREVIEW HEIGHTS */
+.signup-preview-lab {
+  background: #090a0f !important; padding: 10px !important; margin-bottom: 15px !important;
+  border-style: solid !important; height: 140px; display: flex; justify-content: center; overflow: hidden;
+}
+.signup-preview-lab .pixel-avatar-canvas {
+  transform: scale(3.5) !important; margin: 18px 0 0 0 !important;
+}
+
+/* PANEL DIVISION GRIDS */
 .arcade-header { background: rgba(10,11,16,0.9); border-bottom: 2px solid #1c1d2a; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
 .logo { font-family: 'Press Start 2P', monospace; font-size: 16px; }
 .neon-text { color: #fff; } .green-text { color: var(--neon-green); }
 .hud-wallet { font-family: 'Press Start 2P', monospace; color: var(--neon-green); font-size: 14px; }
-.arcade-stage { display: flex; height: calc(100vh - 65px); }
+.arcade-stage { display: flex; height: calc(100vh - 65px); width: 100vw; }
 .panel { flex: 1; padding: 25px; overflow-y: auto; }
 .quest-panel { background-color: var(--panel-bg); border-right: 2px solid #1c1d2a; }
 .shop-panel { background-color: #181926; }
 .panel-title { font-family: 'Press Start 2P', monospace; font-size: 12px; margin-bottom: 20px; }
 
-/* 👾 HIGH DEF 16x16 CSS VECTOR PIXEL ENGINE STYLES */
+/* HIGH RES PROFILE VECTOR HOOKS */
 .avatar-lab {
-  background: #0d0e15; border: 2px dashed var(--neon-cyan); padding: 25px;
+  background: #0d0e15; border: 2px dashed var(--neon-cyan); padding: 30px;
   border-radius: 8px; display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;
 }
 .pixel-avatar-canvas {
-  width: 16px; height: 16px; position: relative;
-  transform: scale(7.5); image-rendering: pixelated; margin: 35px 0;
-  animation: spriteLevitate 1.5s ease-in-out infinite alternate;
+  width: 32px; height: 32px; position: relative;
+  transform: scale(7.5); image-rendering: pixelated; margin: 45px 0;
+  animation: portraitBobbing 2s ease-in-out infinite alternate;
 }
 .pixel-layer { position: absolute; top: 0; left: 0; width: 1px; height: 1px; }
 
-/* LAYER 1: ANIME STRUCTURAL FACE BASE SKIN & EXPRSSIVE EYE MATRIX */
-.anime-base-skin {
+/* 64-BASED FULL VECTOR ANIME PROFILE FACE AND Uniform COATS */
+.anime-64-skin {
   background: transparent;
   box-shadow:
-    /* Head contour coordinates */
-    5px 3px var(--skin-main), 6px 3px var(--skin-main), 7px 3px var(--skin-main), 8px 3px var(--skin-main), 9px 3px var(--skin-main), 10px 3px var(--skin-main),
-    4px 4px var(--skin-main), 5px 4px var(--skin-main), 6px 4px var(--skin-main), 7px 4px var(--skin-main), 8px 4px var(--skin-main), 9px 4px var(--skin-main), 10px 4px var(--skin-main), 11px 4px var(--skin-main),
-    4px 5px var(--skin-main), 5px 5px var(--skin-main), 6px 5px var(--skin-main), 7px 5px var(--skin-main), 8px 5px var(--skin-main), 9px 5px var(--skin-main), 10px 5px var(--skin-main), 11px 5px var(--skin-main),
-    4px 6px var(--skin-main), 5px 6px var(--skin-main), 6px 6px var(--skin-main), 7px 6px var(--skin-main), 8px 6px var(--skin-main), 9px 6px var(--skin-main), 10px 6px var(--skin-main), 11px 6px var(--skin-main),
-    5px 7px var(--skin-shadow), 6px 7px var(--skin-main), 7px 7px var(--skin-main), 8px 7px var(--skin-main), 9px 7px var(--skin-main), 10px 7px var(--skin-main),
-    /* Neck & Arm Node Anchors */
-    7px 8px var(--skin-shadow), 8px 8px var(--skin-shadow),
-    3px 9px var(--skin-main), 12px 9px var(--skin-main),
-    3px 10px var(--skin-main), 12px 10px var(--skin-main),
-    /* Anime 2x2 Core Eyes */
-    5px 5px var(--eye-color), 6px 5px var(--eye-color), 9px 5px var(--eye-color), 10px 5px var(--eye-color),
-    5px 6px var(--eye-color), 6px 6px var(--eye-color), 9px 6px var(--eye-color), 10px 6px var(--eye-color);
+    8px 12px var(--skin-shade), 9px 12px var(--skin-bright), 10px 12px var(--skin-bright), 11px 12px var(--skin-bright), 12px 12px var(--skin-bright), 13px 12px var(--skin-bright), 14px 12px var(--skin-bright), 15px 12px var(--skin-bright), 16px 12px var(--skin-shade),
+    8px 13px var(--skin-shade), 9px 13px var(--skin-bright), 10px 13px var(--skin-bright), 11px 13px var(--skin-bright), 12px 13px var(--skin-bright), 13px 13px var(--skin-bright), 14px 13px var(--skin-bright), 15px 13px var(--skin-bright), 16px 13px var(--skin-shade),
+    8px 14px var(--skin-shade), 9px 14px var(--skin-bright), 10px 14px var(--skin-bright), 11px 14px var(--skin-bright), 12px 14px var(--skin-bright), 13px 14px var(--skin-bright), 14px 14px var(--skin-bright), 15px 14px var(--skin-bright), 16px 14px var(--skin-shade),
+    9px 15px var(--skin-shade), 10px 15px var(--skin-bright), 11px 15px var(--skin-bright), 12px 15px var(--skin-bright), 13px 15px var(--skin-bright), 14px 15px var(--skin-bright), 15px 15px var(--skin-shade),
+    10px 16px var(--skin-shade), 11px 16px var(--skin-bright), 12px 16px var(--skin-bright), 13px 16px var(--skin-bright), 14px 16px var(--skin-shade),
+    11px 17px var(--skin-shade), 12px 17px var(--skin-shade), 13px 17px var(--skin-shade),
+    8px 15px var(--anime-blush), 16px 15px var(--anime-blush),
+    9px 13px var(--eye-dark), 10px 13px var(--eye-dark), 14px 13px var(--eye-dark), 15px 13px var(--eye-dark),
+    9px 14px var(--eye-iris), 10px 14px var(--eye-spark), 14px 14px var(--eye-iris), 15px 14px var(--eye-spark),
+    9px 15px var(--eye-iris), 10px 15px var(--eye-iris), 14px 15px var(--eye-iris), 15px 15px var(--eye-iris);
 }
 
-/* LAYER 2: CHOSEN DYNAMIC ANIME HAIR TILES */
-.hair-anime-blue {
+.hair-anime-cyan {
   background: transparent;
   box-shadow:
-    4px 2px #2b5c8f, 5px 2px #2b5c8f, 6px 1px #3b7cb8, 7px 1px #3b7cb8, 8px 1px #3b7cb8, 9px 1px #3b7cb8, 10px 2px #2b5c8f, 11px 2px #2b5c8f,
-    3px 3px #3b7cb8, 4px 3px #4ba3e3, 5px 3px #4ba3e3, 10px 3px #4ba3e3, 11px 3px #4ba3e3, 12px 3px #3b7cb8,
-    3px 4px #3b7cb8, 4px 4px #4ba3e3, 7px 3px #2b5c8f, 8px 3px #2b5c8f, 11px 4px #4ba3e3, 12px 4px #3b7cb8,
-    3px 5px #2b5c8f, 12px 5px #2b5c8f;
+    8px 9px var(--hair-base), 9px 9px var(--hair-base), 10px 9px var(--hair-light), 11px 9px var(--hair-light), 12px 9px var(--hair-light), 13px 9px var(--hair-base), 14px 9px var(--hair-base),
+    7px 10px var(--hair-dark), 8px 10px var(--hair-base), 9px 10px var(--hair-light), 14px 10px var(--hair-base), 15px 10px var(--hair-base), 16px 10px var(--hair-dark),
+    7px 11px var(--hair-dark), 8px 11px var(--hair-base), 15px 11px var(--hair-base), 16px 11px var(--hair-dark),
+    6px 12px var(--hair-dark), 7px 12px var(--hair-base), 16px 12px var(--hair-base), 17px 12px var(--hair-dark),
+    6px 13px var(--hair-dark), 7px 13px var(--hair-base), 16px 13px var(--hair-base), 17px 13px var(--hair-dark),
+    6px 14px var(--hair-dark), 7px 14px var(--hair-base), 16px 14px var(--hair-base), 17px 14px var(--hair-dark),
+    6px 15px var(--hair-dark), 16px 15px var(--hair-dark);
 }
 .hair-anime-pink {
   background: transparent;
   box-shadow:
-    4px 2px #ba5d7b, 5px 2px #e87fa3, 6px 2px #e87fa3, 7px 2px #e87fa3, 8px 2px #e87fa3, 9px 2px #e87fa3, 10px 2px #e87fa3, 11px 2px #ba5d7b,
-    3px 3px #e87fa3, 4px 3px #ffadd6, 5px 3px #ffadd6, 10px 3px #ffadd6, 11px 3px #ffadd6, 12px 3px #e87fa3,
-    3px 4px #e87fa3, 12px 4px #e87fa3, 3px 5px #ba5d7b, 12px 5px #ba5d7b;
+    8px 9px #e87fa3, 9px 9px #e87fa3, 10px 9px #ffadd6, 11px 9px #ffadd6, 12px 9px #ffadd6, 13px 9px #e87fa3, 14px 9px #e87fa3,
+    7px 10px #ba5d7b, 8px 10px #e87fa3, 9px 10px #ffadd6, 14px 10px #e87fa3, 15px 10px #e87fa3, 16px 10px #ba5d7b,
+    6px 11px #ba5d7b, 7px 11px #e87fa3, 16px 11px #e87fa3, 17px 11px #ba5d7b,
+    6px 12px #ba5d7b, 17px 12px #ba5d7b;
 }
 .hair-anime-spiky {
   background: transparent;
   box-shadow:
-    5px 0px #d96211, 7px 0px #d96211, 9px 0px #d96211,
-    4px 1px #f58422, 5px 1px #f58422, 6px 1px #d96211, 7px 1px #f58422, 8px 1px #d96211, 9px 1px #f58422, 10px 1px #f58422,
-    3px 2px #f58422, 4px 2px #ffac5e, 5px 2px #ffac5e, 6px 2px #ffac5e, 7px 2px #ffac5e, 8px 2px #ffac5e, 9px 2px #ffac5e, 10px 2px #ffac5e, 11px 2px #f58422;
+    9px 8px #d96211, 11px 8px #d96211, 13px 8px #d96211,
+    8px 9px #f58422, 9px 9px #f58422, 10px 9px #ffac5e, 11px 9px #f58422, 12px 9px #ffac5e, 13px 9px #f58422, 14px 9px #f58422,
+    7px 10px #f58422, 8px 10px #ffac5e, 15px 10px #ffac5e, 16px 10px #f58422,
+    6px 11px #d96211, 17px 11px #d96211;
 }
 
-/* LAYER 3: OUTFIT CLOTHING DESIGN MODES */
-.outfit-casual {
+.uniform-sailor {
   background: transparent;
   box-shadow:
-    /* Torso Jacket Blocks */
-    5px 9px var(--outfit-dark), 6px 9px #333645, 7px 9px #333645, 8px 9px #333645, 9px 9px #333645, 10px 9px #333645, 11px 9px var(--outfit-dark),
-    4px 10px var(--outfit-dark), 5px 10px #333645, 6px 10px #ff007f, 7px 10px #333645, 8px 10px #333645, 9px 10px #333645, 10px 10px #ff007f, 11px 10px #333645, 12px 10px var(--outfit-dark),
-    4px 11px var(--outfit-dark), 5px 11px #333645, 6px 11px #333645, 7px 11px #333645, 8px 11px #333645, 9px 11px #333645, 10px 11px #333645, 11px 11px #333645, 12px 11 var(--outfit-dark),
-    /* Pants & Boot elements */
-    5px 12px #222, 6px 12px #222, 9px 12px #222, 10px 12px #222,
-    5px 13px #222, 6px 13px #222, 9px 13px #222, 10px 13px #222,
-    4px 14px #111, 5px 14px #111, 10px 14px #111, 11px 14px #111;
+    9px 18px var(--sailor-white), 10px 18px var(--sailor-white), 11px 18px var(--sailor-red), 12px 18px var(--sailor-red), 13px 18px var(--sailor-white), 14px 18px var(--sailor-white),
+    8px 19px var(--sailor-white), 9px 19px var(--sailor-white), 11px 19px var(--sailor-red), 12px 19px var(--sailor-red), 14px 19px var(--sailor-white), 15px 19px var(--sailor-white),
+    7px 18px var(--sailor-red), 15px 18px var(--sailor-red),
+    7px 19px var(--hair-dark), 16px 19px var(--hair-dark),
+    6px 20px var(--hair-dark), 7px 20px var(--hair-dark), 15px 20px var(--hair-dark), 16px 20px var(--hair-dark);
 }
 
-/* LAYER 4: PREMIUM ITEM MODIFIERS (STACK ON TOP WHEN PURCHASED) */
-.armor-none { background: transparent; }
-.armor-captain-cloak {
+.acc-none { background: transparent; }
+.acc-black-bow {
   background: transparent;
   box-shadow:
-    /* Overlays golden cap shoulder tiles cleanly onto existing layers */
-    3px 8px #ffd700, 4px 8px #ffd700, 11px 8px #ffd700, 12px 8px #ffd700,
-    2px 9px #b8860b, 3px 9px #e60000, 12px 9px #e60000, 13px 9px #b8860b,
-    2px 10px #b8860b, 3px 10px #e60000, 12px 10px #e60000, 13px 10px #b8860b,
-    2px 11px #b8860b, 13px 11px #b8860b;
+    5px 7px #000000, 6px 7px #000000, 7px 7px #222222,
+    4px 8px #000000, 5px 8px #222222, 6px 8px #222222, 7px 8px #000000,
+    4px 9px #000000, 5px 9px #000000, 6px 9px #000000;
 }
 
 .weapon-none { background: transparent; }
 .weapon-plasma-blade {
   background: transparent;
   box-shadow:
-    /* Generates an 8-bit glowing sword vector extending from the hand position */
-    14px 7px var(--outfit-accent), 14px 8px var(--outfit-accent), 14px 9px var(--outfit-accent),
-    15px 6px var(--outfit-accent), 15px 7px #ffffff, 15px 8px var(--outfit-accent),
-    16px 5px var(--outfit-accent), 16px 6px #ffffff, 16px 7px var(--outfit-accent),
-    13px 10px #555;
+    17px 13px var(--neon-cyan), 17px 14px var(--neon-cyan), 17px 15px var(--neon-cyan),
+    18px 11px var(--neon-cyan), 18px 12px #ffffff, 18px 13px var(--neon-cyan),
+    19px 9px var(--neon-cyan), 19px 10px #ffffff, 19px 11px var(--neon-cyan),
+    20px 7px var(--neon-cyan), 20px 8px #ffffff, 20px 9px var(--neon-cyan);
 }
 
 /* VENDOR ARRAYS */
@@ -146,8 +158,14 @@ body {
 .perk-info { font-size: 13px; color: #a9b1d6; flex: 1; margin-bottom: 10px; }
 .buy-btn { background: var(--neon-cyan); color: #000; border: none; padding: 8px; font-family: 'Press Start 2P', monospace; font-size: 9px; cursor: pointer; border-radius: 4px; }
 .buy-btn:disabled { background: #282a3e !important; color: var(--neon-green) !important; border: 1px solid var(--neon-green); }
-.avatar-name { font-size: 11px; font-family: 'Press Start 2P', monospace; color: var(--neon-cyan); }
 
-@keyframes bossFloat { from { transform: translateY(0px); } to { transform: translateY(-8px); } }
-@keyframes spriteLevitate { from { transform: translateY(0px); } to { transform: translateY(-2px); } }
+.canvas-viewport-wrapper canvas {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@keyframes portraitBobbing { from { transform: translateY(0px); } to { transform: translateY(-4px); } }
+
 

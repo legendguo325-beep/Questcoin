@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Arcade QuestCoin",
+  "name": "Arcade Quest Cabinet",
   "version": "1.0",
-  "description": "Background tracker extension with full-screen arcade dashboard integration.",
+  "description": "Background tracker extension with full-screen controllable 2D arcade battleground arena.",
   "permissions": [
     "storage",
     "tabs"
@@ -11,3 +11,4 @@
     "default_popup": "popup.html"
   }
 }
+
