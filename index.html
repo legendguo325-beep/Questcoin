@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuestCoin Pro — Cabinet Dashboard</title>
+  <title>QuestCoin — Anime Arcade Edition</title>
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin="anonymous">
   <link href="https://googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <div id="login-overlay-screen" class="gate-overlay">
     <div class="arcade-login-box">
       <h2>🆕 HERO CREATION REGISTRY</h2>
-      <p style="color: #a9b1d6; font-size: 13px; margin-bottom: 20px;">Initialize your mainframe node runner connection parameter profile details.</p>
+      <p style="color: #a9b1d6; font-size: 13px; margin-bottom: 20px;">Initialize your profile parameters to sync your mainframe node runner grid connection.</p>
       
       <div class="input-group">
         <label>HERO USERNAME / CODENAME</label>
@@ -25,28 +25,28 @@
       <div class="input-group">
         <label>IDENTITY ARCHETYPE (GENDER)</label>
         <select id="reg-gender">
-          <option value="male">Male Node Runner</option>
-          <option value="female">Female Grid Ranger</option>
+          <option value="male">Male Hero</option>
+          <option value="female">Female Hero</option>
         </select>
       </div>
 
       <div class="input-group">
-        <label>COSMETIC GENE BASE (HAIR STYLE)</label>
+        <label>HAIR SELECTOR</label>
         <select id="reg-hair">
-          <option value="🦱">Retro Curled Pompadour</option>
-          <option value="🦰">Neon Spiky Cyber Strands</option>
-          <option value="👱">Sleek Laser Under-Cut</option>
+          <option value="hair-anime-blue">Spiky Cobalt Anime Strands</option>
+          <option value="hair-anime-pink">Sleek Pastel Rose Bob</option>
+          <option value="hair-anime-spiky">Fiery Explosive Orange Spikes</option>
         </select>
       </div>
 
-      <button class="menu-action-btn" onclick="executeProfileLoginRegistration()">SYNC & PRESS START</button>
+      <button id="login-submit-btn" class="menu-action-btn">SYNC & PRESS START</button>
     </div>
   </div>
 
-  <!-- LAYER B: MAIN SPLIT WINDOW MODULES (HIDDEN BY DEFAULT UNTIL LOGIN) -->
+  <!-- LAYER B: MAIN SPLIT WINDOW MODULES -->
   <div id="main-cabinet-interface" style="display: none; width: 100%; height: 100vh;">
     <header class="arcade-header">
-      <div class="logo"><span class="neon-text">QUEST</span><span class="green-text">COIN</span></div>
+      <div class="logo"><span class="neon-text">QUEST</span><span class="green-text">CABINET</span></div>
       <div class="user-status-card">RUNNER NODE: <span id="hud-name" style="color: #00edd7;">PLAYER</span></div>
       <div class="hud-wallet">🪙 COINS: <span id="coin-total">100</span></div>
     </header>
@@ -71,7 +71,7 @@
             <div style="font-size: 11px; margin-top: 4px; color: #ff007f;">HP: <span id="hp-text">300</span> / 300</div>
           </div>
 
-          <button id="boss-attack-btn" onclick="strikeBoss()" style="background: #14151f; border: 2px solid #ff007f; padding: 10px; border-radius: 4px; color: #ff007f; font-family: 'Press Start 2P', monospace; font-size: 11px; cursor: pointer; width: 100%;">
+          <button id="boss-attack-btn" style="background: #14151f; border: 2px solid #ff007f; padding: 10px; border-radius: 4px; color: #ff007f; font-family: 'Press Start 2P', monospace; font-size: 11px; cursor: pointer; width: 100%;">
             ⚔️ LAUNCH ATTACK
           </button>
         </div>
@@ -79,29 +79,34 @@
 
       <!-- RIGHT WINDOW: LIVE AVATAR CANVAS & ITEM SHOPS -->
       <section class="panel shop-panel">
-        <h2 class="panel-title text-cyan">> REFT_WORKSHOP_STORE</h2>
+        <h2 class="panel-title text-cyan">> RENDER_WORKSHOP_STORE</h2>
         
         <div class="avatar-lab">
-          <div class="avatar-frame">
-            <div class="hair-layer" id="canvas-hair">💇</div>
-            <div class="avatar-sprite" id="canvas-sprite">🧑‍🚀</div>
-            <div class="avatar-name" id="canvas-title">UNINITIALIZED</div>
+          <!-- 🎮 UPGRADED HIGH-DETAIL PIXEL ART RENDER MATRIX CANVAS -->
+          <div class="pixel-avatar-canvas">
+            <div id="pixel-body-base" class="pixel-layer anime-base-skin"></div>
+            <div id="pixel-clothing" class="pixel-layer outfit-casual"></div>
+            <div id="pixel-hair-node" class="pixel-layer hair-anime-blue"></div>
+            <!-- Equipment Upgrade Overlays -->
+            <div id="pixel-armor-node" class="pixel-layer armor-none"></div>
+            <div id="pixel-weapon-node" class="pixel-layer weapon-none"></div>
           </div>
-          <div id="active-perk" style="font-size: 12px; color: #ff007f; margin-top: 10px; font-weight: bold;">Class Perks Offline</div>
+          <div class="avatar-name" id="canvas-title" style="margin-top: 15px;">UNINITIALIZED</div>
+          <div id="active-perk" style="font-size: 12px; color: #ff007f; margin-top: 5px; font-weight: bold;">Class Perks Offline</div>
         </div>
 
         <div class="shop-grid">
           <div class="shop-card">
-            <h4>Neon Cyber Suit</h4>
-            <span class="slot-tag">Sprite Modification</span>
-            <p class="perk-info">Replaces character torso model grid mesh templates</p>
-            <button class="buy-btn" id="btn-cyber" onclick="buyItem(30, 'cyber', 'Skin', '🤖')">30 COINS</button>
+            <h4>Cyber Captain Cloak</h4>
+            <span class="slot-tag">Armor Modification</span>
+            <p class="perk-info">Overlays a dynamic golden-trimmed captain's shoulder cloak mantle across your character canvas.</p>
+            <button class="buy-btn" id="btn-cyber">30 COINS</button>
           </div>
           <div class="shop-card">
             <h4>Plasma Laser Blade</h4>
             <span class="slot-tag">Weapon Armament</span>
-            <p class="perk-info">Equips active glowing energy beam blade arrays</p>
-            <button class="buy-btn" id="btn-weapon" onclick="buyItem(50, 'weapon', 'Weapon', '⚔️')">50 COINS</button>
+            <p class="perk-info">Equips an active glowing pixel energy blade model modifier into your hero's equipment slot.</p>
+            <button class="buy-btn" id="btn-weapon">50 COINS</button>
           </div>
         </div>
       </section>

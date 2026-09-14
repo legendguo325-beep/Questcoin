@@ -7,6 +7,13 @@
   --neon-green: #39ff14;
   --neon-cyan: #00edd7;
   --neon-pink: #ff007f;
+  
+  /* 🎨 Premium Anime Profile Swatch Palette Matrices */
+  --skin-main: #fcd0a1;
+  --skin-shadow: #e0a370;
+  --eye-color: #1a1a2e;
+  --outfit-dark: #12131a;
+  --outfit-accent: #00f0ff;
 }
 
 body {
@@ -16,62 +23,121 @@ body {
   overflow: hidden;
 }
 
-/* USER RECREATION PROFILE REGISTRY PAGE COVERS */
+/* MODAL REGISTRY WRAPPERS */
 .gate-overlay {
   position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(10, 11, 16, 0.95);
+  background: rgba(10, 11, 16, 0.96);
   display: flex; justify-content: center; align-items: center; z-index: 9999;
 }
-
-.arcade-login-box {
-  background: var(--panel-bg); border: 3px solid var(--neon-cyan);
-  padding: 30px; border-radius: 8px; width: 100%; max-width: 450px;
-  box-shadow: 0 0 20px rgba(0, 237, 215, 0.2);
-}
-
-.arcade-login-box h2 {
-  font-family: 'Press Start 2P', monospace; font-size: 13px; color: var(--neon-cyan); margin-bottom: 10px;
-}
-
+.arcade-login-box { background: var(--panel-bg); border: 3px solid var(--neon-cyan); padding: 30px; border-radius: 8px; width: 100%; max-width: 450px; }
+.arcade-login-box h2 { font-family: 'Press Start 2P', monospace; font-size: 13px; color: var(--neon-cyan); margin-bottom: 15px; }
 .input-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px; }
 .input-group label { font-size: 11px; font-weight: bold; color: #7aa2f7; }
-.input-group input, .input-group select {
-  background: #0f111a; border: 1px solid #3b4261; padding: 10px; border-radius: 4px; color: #fff; outline: none;
-}
+.input-group input, .input-group select { background: #0f111a; border: 1px solid #3b4261; padding: 10px; border-radius: 4px; color: #fff; outline: none; }
+.menu-action-btn { background: var(--neon-green); color: #000; border: none; padding: 12px; width: 100%; font-family: 'Press Start 2P', monospace; font-size: 11px; font-weight: bold; cursor: pointer; }
 
-.menu-action-btn {
-  background: var(--neon-green); color: #000; border: none; padding: 12px; width: 100%;
-  font-family: 'Press Start 2P', monospace; font-size: 11px; font-weight: bold; cursor: pointer; border-radius: 4px;
-}
-
-/* WORKSPACE SPLIT CONTAINER LAYOUT SYSTEMS */
-.arcade-header {
-  background: rgba(10,11,16,0.9); border-bottom: 2px solid #1c1d2a;
-  padding: 15px 25px; display: flex; justify-content: space-between; align-items: center;
-}
+/* ARCADE SCREEN CABINET SPLIT BLOCKS */
+.arcade-header { background: rgba(10,11,16,0.9); border-bottom: 2px solid #1c1d2a; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
 .logo { font-family: 'Press Start 2P', monospace; font-size: 16px; }
 .neon-text { color: #fff; } .green-text { color: var(--neon-green); }
 .hud-wallet { font-family: 'Press Start 2P', monospace; color: var(--neon-green); font-size: 14px; }
-
 .arcade-stage { display: flex; height: calc(100vh - 65px); }
 .panel { flex: 1; padding: 25px; overflow-y: auto; }
 .quest-panel { background-color: var(--panel-bg); border-right: 2px solid #1c1d2a; }
 .shop-panel { background-color: #181926; }
 .panel-title { font-family: 'Press Start 2P', monospace; font-size: 12px; margin-bottom: 20px; }
 
-/* CANVAS PREVIEW SYSTEM FRAMEWORX */
+/* 👾 HIGH DEF 16x16 CSS VECTOR PIXEL ENGINE STYLES */
 .avatar-lab {
-  background: #0d0e15; border: 2px dashed var(--neon-cyan); padding: 20px;
+  background: #0d0e15; border: 2px dashed var(--neon-cyan); padding: 25px;
   border-radius: 8px; display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;
 }
-.avatar-frame {
-  width: 110px; height: 110px; background: var(--panel-bg); border-radius: 50%;
-  border: 2px solid #282a3e; display: flex; flex-direction: column; justify-content: center; align-items: center;
-  position: relative; animation: avatarFloat 1.8s ease-in-out infinite alternate;
+.pixel-avatar-canvas {
+  width: 16px; height: 16px; position: relative;
+  transform: scale(7.5); image-rendering: pixelated; margin: 35px 0;
+  animation: spriteLevitate 1.5s ease-in-out infinite alternate;
 }
-.hair-layer { position: absolute; top: 15px; font-size: 24px; z-index: 5; }
-.avatar-sprite { font-size: 38px; margin-top: 10px; }
-.avatar-name { font-size: 10px; font-family: 'Press Start 2P', monospace; color: var(--neon-cyan); margin-top: 5px; }
+.pixel-layer { position: absolute; top: 0; left: 0; width: 1px; height: 1px; }
+
+/* LAYER 1: ANIME STRUCTURAL FACE BASE SKIN & EXPRSSIVE EYE MATRIX */
+.anime-base-skin {
+  background: transparent;
+  box-shadow:
+    /* Head contour coordinates */
+    5px 3px var(--skin-main), 6px 3px var(--skin-main), 7px 3px var(--skin-main), 8px 3px var(--skin-main), 9px 3px var(--skin-main), 10px 3px var(--skin-main),
+    4px 4px var(--skin-main), 5px 4px var(--skin-main), 6px 4px var(--skin-main), 7px 4px var(--skin-main), 8px 4px var(--skin-main), 9px 4px var(--skin-main), 10px 4px var(--skin-main), 11px 4px var(--skin-main),
+    4px 5px var(--skin-main), 5px 5px var(--skin-main), 6px 5px var(--skin-main), 7px 5px var(--skin-main), 8px 5px var(--skin-main), 9px 5px var(--skin-main), 10px 5px var(--skin-main), 11px 5px var(--skin-main),
+    4px 6px var(--skin-main), 5px 6px var(--skin-main), 6px 6px var(--skin-main), 7px 6px var(--skin-main), 8px 6px var(--skin-main), 9px 6px var(--skin-main), 10px 6px var(--skin-main), 11px 6px var(--skin-main),
+    5px 7px var(--skin-shadow), 6px 7px var(--skin-main), 7px 7px var(--skin-main), 8px 7px var(--skin-main), 9px 7px var(--skin-main), 10px 7px var(--skin-main),
+    /* Neck & Arm Node Anchors */
+    7px 8px var(--skin-shadow), 8px 8px var(--skin-shadow),
+    3px 9px var(--skin-main), 12px 9px var(--skin-main),
+    3px 10px var(--skin-main), 12px 10px var(--skin-main),
+    /* Anime 2x2 Core Eyes */
+    5px 5px var(--eye-color), 6px 5px var(--eye-color), 9px 5px var(--eye-color), 10px 5px var(--eye-color),
+    5px 6px var(--eye-color), 6px 6px var(--eye-color), 9px 6px var(--eye-color), 10px 6px var(--eye-color);
+}
+
+/* LAYER 2: CHOSEN DYNAMIC ANIME HAIR TILES */
+.hair-anime-blue {
+  background: transparent;
+  box-shadow:
+    4px 2px #2b5c8f, 5px 2px #2b5c8f, 6px 1px #3b7cb8, 7px 1px #3b7cb8, 8px 1px #3b7cb8, 9px 1px #3b7cb8, 10px 2px #2b5c8f, 11px 2px #2b5c8f,
+    3px 3px #3b7cb8, 4px 3px #4ba3e3, 5px 3px #4ba3e3, 10px 3px #4ba3e3, 11px 3px #4ba3e3, 12px 3px #3b7cb8,
+    3px 4px #3b7cb8, 4px 4px #4ba3e3, 7px 3px #2b5c8f, 8px 3px #2b5c8f, 11px 4px #4ba3e3, 12px 4px #3b7cb8,
+    3px 5px #2b5c8f, 12px 5px #2b5c8f;
+}
+.hair-anime-pink {
+  background: transparent;
+  box-shadow:
+    4px 2px #ba5d7b, 5px 2px #e87fa3, 6px 2px #e87fa3, 7px 2px #e87fa3, 8px 2px #e87fa3, 9px 2px #e87fa3, 10px 2px #e87fa3, 11px 2px #ba5d7b,
+    3px 3px #e87fa3, 4px 3px #ffadd6, 5px 3px #ffadd6, 10px 3px #ffadd6, 11px 3px #ffadd6, 12px 3px #e87fa3,
+    3px 4px #e87fa3, 12px 4px #e87fa3, 3px 5px #ba5d7b, 12px 5px #ba5d7b;
+}
+.hair-anime-spiky {
+  background: transparent;
+  box-shadow:
+    5px 0px #d96211, 7px 0px #d96211, 9px 0px #d96211,
+    4px 1px #f58422, 5px 1px #f58422, 6px 1px #d96211, 7px 1px #f58422, 8px 1px #d96211, 9px 1px #f58422, 10px 1px #f58422,
+    3px 2px #f58422, 4px 2px #ffac5e, 5px 2px #ffac5e, 6px 2px #ffac5e, 7px 2px #ffac5e, 8px 2px #ffac5e, 9px 2px #ffac5e, 10px 2px #ffac5e, 11px 2px #f58422;
+}
+
+/* LAYER 3: OUTFIT CLOTHING DESIGN MODES */
+.outfit-casual {
+  background: transparent;
+  box-shadow:
+    /* Torso Jacket Blocks */
+    5px 9px var(--outfit-dark), 6px 9px #333645, 7px 9px #333645, 8px 9px #333645, 9px 9px #333645, 10px 9px #333645, 11px 9px var(--outfit-dark),
+    4px 10px var(--outfit-dark), 5px 10px #333645, 6px 10px #ff007f, 7px 10px #333645, 8px 10px #333645, 9px 10px #333645, 10px 10px #ff007f, 11px 10px #333645, 12px 10px var(--outfit-dark),
+    4px 11px var(--outfit-dark), 5px 11px #333645, 6px 11px #333645, 7px 11px #333645, 8px 11px #333645, 9px 11px #333645, 10px 11px #333645, 11px 11px #333645, 12px 11 var(--outfit-dark),
+    /* Pants & Boot elements */
+    5px 12px #222, 6px 12px #222, 9px 12px #222, 10px 12px #222,
+    5px 13px #222, 6px 13px #222, 9px 13px #222, 10px 13px #222,
+    4px 14px #111, 5px 14px #111, 10px 14px #111, 11px 14px #111;
+}
+
+/* LAYER 4: PREMIUM ITEM MODIFIERS (STACK ON TOP WHEN PURCHASED) */
+.armor-none { background: transparent; }
+.armor-captain-cloak {
+  background: transparent;
+  box-shadow:
+    /* Overlays golden cap shoulder tiles cleanly onto existing layers */
+    3px 8px #ffd700, 4px 8px #ffd700, 11px 8px #ffd700, 12px 8px #ffd700,
+    2px 9px #b8860b, 3px 9px #e60000, 12px 9px #e60000, 13px 9px #b8860b,
+    2px 10px #b8860b, 3px 10px #e60000, 12px 10px #e60000, 13px 10px #b8860b,
+    2px 11px #b8860b, 13px 11px #b8860b;
+}
+
+.weapon-none { background: transparent; }
+.weapon-plasma-blade {
+  background: transparent;
+  box-shadow:
+    /* Generates an 8-bit glowing sword vector extending from the hand position */
+    14px 7px var(--outfit-accent), 14px 8px var(--outfit-accent), 14px 9px var(--outfit-accent),
+    15px 6px var(--outfit-accent), 15px 7px #ffffff, 15px 8px var(--outfit-accent),
+    16px 5px var(--outfit-accent), 16px 6px #ffffff, 16px 7px var(--outfit-accent),
+    13px 10px #555;
+}
 
 /* VENDOR ARRAYS */
 .shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
@@ -80,6 +146,8 @@ body {
 .perk-info { font-size: 13px; color: #a9b1d6; flex: 1; margin-bottom: 10px; }
 .buy-btn { background: var(--neon-cyan); color: #000; border: none; padding: 8px; font-family: 'Press Start 2P', monospace; font-size: 9px; cursor: pointer; border-radius: 4px; }
 .buy-btn:disabled { background: #282a3e !important; color: var(--neon-green) !important; border: 1px solid var(--neon-green); }
+.avatar-name { font-size: 11px; font-family: 'Press Start 2P', monospace; color: var(--neon-cyan); }
 
 @keyframes bossFloat { from { transform: translateY(0px); } to { transform: translateY(-8px); } }
-@keyframes avatarFloat { from { transform: translateY(0px); } to { transform: translateY(-5px); } }
+@keyframes spriteLevitate { from { transform: translateY(0px); } to { transform: translateY(-2px); } }
+
